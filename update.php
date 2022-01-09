@@ -2,14 +2,7 @@
 include_once 'dbConnection.php';
 session_start();
 $email=$_SESSION['email'];
-//delete feedback
-if(isset($_SESSION['key'])){
-if(@$_GET['fdid'] && $_SESSION['key']=='sunny7785068889') {
-$id=@$_GET['fdid'];
-$result = mysqli_query($con,"DELETE FROM feedback WHERE id='$id' ") or die('Error');
-header("location:dash.php?q=3");
-}
-}
+
 
 //delete user
 if(isset($_SESSION['key'])){
